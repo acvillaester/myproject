@@ -1,0 +1,7 @@
+---
+- hosts: staging_server
+  user: root
+  sudo: yes
+
+  roles:
+  - server_info
