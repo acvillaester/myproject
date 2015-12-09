@@ -1,6 +1,6 @@
 ---
 - name: copy script to opt
-  copy: src=/var/lib/awx/projects/change_password/roles/change_password/files/change_password.sh dest=/opt mode=755
+  copy: src=change_password.sh dest=/opt mode=755
 
 - name: change password efemci, esad and epayment user
   command: "/opt/change_password.sh"
