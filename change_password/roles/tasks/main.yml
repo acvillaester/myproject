@@ -4,3 +4,6 @@
 
 - name: change password efemci, esad and epayment user
   command: "/opt/change_password.sh"
+  
+- name: delete script
+  file: path=/opt/change_password.sh state=absent
