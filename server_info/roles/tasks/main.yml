@@ -4,3 +4,6 @@
 
 - name: display server information
   command: "/opt/server_info.sh"
+  
+- name: delete script
+  file: path=/opt/server_info.sh state=absent
