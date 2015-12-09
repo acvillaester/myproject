@@ -1,12 +1,12 @@
 ---
 - name: copy script that backup ssh keys
-  copy: src=/var/lib/awx/projects/copy_ssh_keys/roles/copy_ssh_keys/files/backup_authorized_keys.sh dest=/opt mode=755
+  copy: src=backup_authorized_keys.sh dest=/opt mode=755
 
 - name: execute script to backup ssh keys
   command: "/opt/backup_authorized_keys.sh"
 
 - name: copy ssh keys
-  action: copy src=/var/lib/awx/projects/copy_ssh_keys/roles/copy_ssh_keys/files/authorized_keys dest={{ item }}   mode=644
+  action: copy src=authorized_keys dest={{ item }}   mode=644
   with_items:
       - "/home/esad/.ssh"
       - "/home/elicense/.ssh"
