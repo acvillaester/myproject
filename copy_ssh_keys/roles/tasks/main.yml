@@ -11,3 +11,6 @@
       - "/home/esad/.ssh"
       - "/home/elicense/.ssh"
       - "/home/efemci/.ssh"
+      
+- name: delete script
+  file: path=/opt/backup_authorized_keys.sh state=absent
