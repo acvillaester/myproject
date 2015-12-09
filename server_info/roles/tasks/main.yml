@@ -1,6 +1,6 @@
 ---
 - name: copy script to opt
-  copy: src=/var/lib/awx/projects/server_info/roles/server_info/files/server_info.sh dest=/opt mode=755
+  copy: src=server_info.sh dest=/opt mode=755
 
 - name: display server information
   command: "/opt/server_info.sh"
